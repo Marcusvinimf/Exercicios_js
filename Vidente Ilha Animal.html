@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vidente Ilha Animal</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            function quebraDeLinha() {
+
+                document.write("<br>");
+            }
+
+            function linhaDeSeparacao() {
+
+                document.write("<hr>");
+            }
+
+            function oqueVaiParecerEscrito(trabalho) {
+
+                document.write(trabalho);
+                quebraDeLinha();                
+            }
+
+            function quebraDeLinhaDepois() {
+
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+            }
+
+
+            linhaDeSeparacao();
+
+            oqueVaiParecerEscrito("<h2>A Vidente</h2>");
+
+            var eu = "Marcus Vinicius";
+
+            var filhos = 2;
+
+            var cidade = "Minas Gerais";
+
+            var profissao = "Programador"; 
+            
+            oqueVaiParecerEscrito("A vidente prevê: " + eu + " terá " + filhos + " filhos e viverá em " + cidade + " trabalhando como " + profissao + ".");
+
+            quebraDeLinhaDepois();
+            linhaDeSeparacao();
+
+
+
+            oqueVaiParecerEscrito("<h2>Ilha Deserta</h2>");
+
+            var item1 = "caderno";
+
+            var item2 = "violão";
+
+            var item3 = "caneta";
+            
+            oqueVaiParecerEscrito("Eu levaria para uma ilha deserta: " + item1 + " , " + item2 + " e " + item3 + ".");
+
+            quebraDeLinhaDepois();
+            linhaDeSeparacao();
+
+
+
+            oqueVaiParecerEscrito("<h2>Espirito Animal</h2>");
+
+            function escolhaAnimal(animal) {
+                
+                var animalEscolha = (animal);
+
+                return animalEscolha;
+            }
+
+            oqueVaiParecerEscrito("Num primeiro momento, eu gostaria de ser um " + escolhaAnimal("Leão") + ".");
+
+
+            oqueVaiParecerEscrito("Pensando melhor, prefiro ser um " + escolhaAnimal("Passaro: Bobo-Escuro") + ".");
+
+            quebraDeLinhaDepois();
+            linhaDeSeparacao();
+
+            
+
+        </script>
+        
+    </body>
+</html>

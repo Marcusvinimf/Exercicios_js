@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>calculoe e saudação</title>
+    </head>
+
+    <body>
+        <script>
+
+            // function saldacao(){
+
+            // }
+
+            function calculoDobro() {
+                return numeroParaInformar * 2;
+            }
+
+            function calculoMetade() {
+                return numeroParaInformar2 / 2;
+            }
+
+            var nome = prompt("Informe seu nome de pessoa extraordinária:")
+
+            var numeroParaInformar = prompt(nome + ", Me diga um numero para dobrar");
+
+            document.write(nome + ", o numero que você pessoa extraordinária quer dobrar é " + calculoDobro(numeroParaInformar) + "<br>" + "<br>");
+                        
+            var numeroParaInformar2 = prompt(nome + ", Me diga um numero para cortar ao meio");
+
+            document.write(nome + ", o numero que você pessoa extraordinária quer cortar ao meio é " + calculoMetade(numeroParaInformar2) + "<br>" + "<br>");
+
+
+        </script>
+    </body>
+</html>
