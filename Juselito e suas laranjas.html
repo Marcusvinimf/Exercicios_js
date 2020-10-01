@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Joselito e suas laranjas</title>
+    </head>
+
+    <body>
+
+        <img src="https://images.daznservices.com/di/library/Goal_Brasil/3d/86/joselito-food-stadium_y4mercxvfm691pdk7oy0xn72g.jpg?t=-356030772&w=800&h=600" width="180px" height="200">
+
+        <script>
+
+            function distribuirLaranjas (numeroDeLaranjas, numeroDeVizinhos) { 
+                
+                var resto = numeroDeLaranjas%numeroDeVizinhos;
+
+                var vizinhos = (numeroDeLaranjas-resto)/numeroDeVizinhos;
+
+                document.write("Eu fiquei com " + resto + " laranja(s) e meus vizinhos ficaram com " + vizinhos + " cada." + "<br>");
+            }
+
+            var numeroDeLaranjas = prompt("Quantas laranjas vc tem Joselito?");
+
+            var numeroDeVizinhos = prompt("Quantos Vizinhos vão participar do 'rateio' ");
+
+            distribuirLaranjas(numeroDeLaranjas, numeroDeVizinhos);
+
+        </script>
+
+        <hr>
+
+        <p>vizinhos de joselito:</p>
+
+        <img src="https://1.bp.blogspot.com/_-80qCl36iZk/ScY-KVZ7gVI/AAAAAAAAA2k/_NczOCwxbfY/s280/Pre%C3%A1+02.jpg" width="180px" height="200">
+        
+    </body>
+</html>
