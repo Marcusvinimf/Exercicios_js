@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>inflação dos Produtos</title>
+    </head>
+
+    <body>
+        <script>
+
+            function arredonda (arren) {
+                return Math.round (arren*100)/100;
+            }
+
+
+            function calculaInflacao (valorInicial, valorFinal, dataInicial, dataFinal, produto) {
+
+                var valor = valorFinal - valorInicial;
+                var data = dataFinal - dataInicial;
+                var inflacao = valor / data;
+
+                document.write("A inflação do " + produto + " é R$ " + arredonda(valor) + "<br>" + "<br>")
+
+                document.write("A inflação total é R$ " + arredonda(valor/data) + "<br>" + "<br>"  )
+
+                document.write("A inflação diaria do " + produto + " é R$ " + arredonda(inflacao) + "<br>" + "<br>")
+            }
+
+
+
+            calculaInflacao(3.30, 4.70, 24, 30, "tomate");
+
+            calculaInflacao(2.99, 3.25, 24, 30, "arroz");
+
+            calculaInflacao(3.99, 4.14, 24, 30, "cenoura");
+
+        </script>
+        
+    </body>
+</html>
