@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Restaurante</title>
+    </head>
+
+    <body>
+        <script>
+
+            //--------minha base de sempre--------
+
+            function quebraDeLinha() {
+
+                document.write("<br>");
+            }
+
+            function linhaDeSeparacao() {
+
+                document.write("<hr>");
+            }
+
+            function oqueVaiParecerEscrito(trabalho) {
+
+                document.write(trabalho);
+                quebraDeLinha();                
+            }
+
+            function quebraDeLinhaDepois() {
+
+                document.write("<br>");
+            }
+
+            //--------minha base de sempre--------
+
+            //---------- Restaurante ----------
+
+            function menuDeBebidas (item1, item2, item3){
+
+                oqueVaiParecerEscrito(item1);
+                oqueVaiParecerEscrito(item2);
+                oqueVaiParecerEscrito(item3);
+            }
+
+            var item1 = ("1 Refrigerante");
+
+            var item2 = ("2 Suco");
+
+            var item3 = ("3 Água");
+
+            menuDeBebidas (item1, item2, item3);
+
+
+            quebraDeLinhaDepois();
+            linhaDeSeparacao();
+
+            var item1 = ("Refrigerante: R$5,00");
+
+            var item2 = ("Suco: R$3,50");
+
+            var item3 = ("Água: 2,00");
+
+            var item4 = ("Cerveja: EM FALTA!!!")
+
+            var escolhaDoCliente = prompt("Oque vai querer?")
+
+            escolhaBebida ();
+        </script>
+        
+    </body>
+</html>

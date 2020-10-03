@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercitando a Mente</title>
+    </head>
+
+    <body>
+        <script>
+
+            //--------minha base de sempre--------
+
+            function quebraDeLinha() {
+
+                document.write("<br>");
+            }
+
+            function linhaDeSeparacao() {
+
+                document.write("<hr>");
+            }
+
+            function oqueVaiParecerEscrito(trabalho) {
+
+                document.write(trabalho);
+                quebraDeLinha();                
+            }
+
+            function quebraDeLinhaDepois() {
+
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+            }
+
+            //--------minha base de sempre--------
+
+            //---------- Primeira Atividade ----------
+            function primeiroVerboQualquer (primeiraString,segundaString ){
+
+                return (primeiraString + " " + segundaString);
+            }
+
+            oqueVaiParecerEscrito(primeiroVerboQualquer("ola", "mundo"));
+
+            quebraDeLinhaDepois();
+            linhaDeSeparacao();
+
+            //---------- Segunda Atividade ----------
+
+            function segundoVerboQualquer (nomeDaPessoa){
+
+                return ("Olá, " + nomeDaPessoa + "!" + "<br>" + "Tudo bem, " + nomeDaPessoa + " ?");
+            }
+
+            oqueVaiParecerEscrito(segundoVerboQualquer (prompt("Digite Seu Nome:")));
+
+            quebraDeLinhaDepois();
+            linhaDeSeparacao();
+
+            //---------- Terceira Atividade ----------
+
+            function terceiroVerboQualquer(umNumero){
+
+                var restoDaDivisao = 9/ umNumero;
+
+                return  ("O resto de " + umNumero + " divididos por 9 é: " + restoDaDivisao + "."); 
+            }
+
+
+            oqueVaiParecerEscrito(terceiroVerboQualquer(prompt("Escolha um numero:")));
+
+            quebraDeLinhaDepois();
+            linhaDeSeparacao();
+
+            //---------- Quarta Atividade ----------
+
+            function quartoVerboQualquer (idadeDoUsuario, idadePermitido){
+
+                return (idadeDoUsuario, idadePermitido);
+            }
+
+            var idadeDoUsuario = (prompt("Digite sua idade para entrar na Auto Escola:"));
+
+            var idadePermitido = 18;
+
+            oqueVaiParecerEscrito("você pode dirigir ? " + "<br>");
+
+            if (idadeDoUsuario >= idadePermitido){
+
+                oqueVaiParecerEscrito("Você pode dirigir e ser preso!!!");
+            }
+
+            if (idadeDoUsuario < idadePermitido){
+                
+                oqueVaiParecerEscrito("Ainda tem dente de leite e quer dirigir???" + "<BR>" + "NÃO PODE!!!");
+            }
+
+            quebraDeLinhaDepois();
+            linhaDeSeparacao();
+
+
+            //-------- Quinta Atividade --------
+
+            function quintoVerboQualquer (idadeDoUsuario, idadePermitidoBeber){
+
+                return (idadeDoUsuario, idadePermitidoBeber);
+            }
+
+            var idadeDoUsuario = (prompt("Digite sua idade para entrar no bar:"));
+
+            var idadePermitidoBeber = 20;
+
+            oqueVaiParecerEscrito("Você pode beber?" + "<br>");
+
+            if (idadeDoUsuario >= idadePermitidoBeber){
+
+                oqueVaiParecerEscrito("Você pode beber e ser preso!!!");
+            }
+
+            if (idadeDoUsuario < idadePermitidoBeber){
+                
+                oqueVaiParecerEscrito("Ainda tem dente de leite e quer beber???" + "<BR>" + "NÃO PODE!!!");
+            }
+
+            quebraDeLinhaDepois();
+            linhaDeSeparacao();
+
+            
+            //---------- Sexta Atividade ----------
+
+            function sextoVerboQualquer (verde, amarelo, vermelho){
+
+                return (verde, amarelo, vermelho)
+            }
+
+            oqueVaiParecerEscrito("ATENÇÃO AO SEMÁFORO!!!" + "<br>" );
+                 
+
+            var semaforo = prompt("Qual a cor do sinal?");
+
+            if (semaforo == "verde") {
+
+                oqueVaiParecerEscrito("Pode passar");
+            }
+
+            if (semaforo == "amarelo") {
+
+                oqueVaiParecerEscrito("Reduza a velocidade e freie com cautela");
+            }
+
+            if (semaforo == "vermelho") {
+
+                oqueVaiParecerEscrito("PARE!!!");
+            }
+
+            quebraDeLinhaDepois();
+            linhaDeSeparacao();
+            
+        </script>
+        
+    </body>
+</html>
