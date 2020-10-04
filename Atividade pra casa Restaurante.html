@@ -35,36 +35,60 @@
 
             //---------- Restaurante ----------
 
-            function menuDeBebidas (item1, item2, item3){
+            function menuDeBebidas (menu, item1, item2, item3, item4){
+
+                oqueVaiParecerEscrito(menu);
 
                 oqueVaiParecerEscrito(item1);
+
                 oqueVaiParecerEscrito(item2);
+
                 oqueVaiParecerEscrito(item3);
+
+                oqueVaiParecerEscrito(item4);
             }
 
-            var item1 = ("1 Refrigerante");
+            var menu = ("Menu: <br>")
 
-            var item2 = ("2 Suco");
+            var item1 = ("1 - Refrigerante");
 
-            var item3 = ("3 Água");
+            var item2 = ("2 - Suco");
 
-            menuDeBebidas (item1, item2, item3);
+            var item3 = ("3 - Água");
+
+            var item4 = ("4 - cerveja");
+
+            menuDeBebidas (menu, item1, item2, item3, item4);
 
 
             quebraDeLinhaDepois();
             linhaDeSeparacao();
+                
+            var oqueAPessoaEscolheu = prompt("Oque vai querer? ESCOLHA UM NUMERO!!!\n1 - Refrigerante\n2 - Suco\n3 - Água\n4 - cerveja");
 
-            var item1 = ("Refrigerante: R$5,00");
+            if (oqueAPessoaEscolheu == 1 )
+            {
+                oqueVaiParecerEscrito("Refrigerante R$: 5,00")
+            } else if (oqueAPessoaEscolheu == 2 )
+            {
+                oqueVaiParecerEscrito("Suco R$: 3,50")
+            } else if (oqueAPessoaEscolheu == 3 )
+            {
+                oqueVaiParecerEscrito("Agua R$: 2,00")
+            } else if (oqueAPessoaEscolheu == 4 )
+            {
+                oqueVaiParecerEscrito("Cerveja R$: 8,00")
+            } else {
+                oqueVaiParecerEscrito("Temos somente oque está aparecendo no menu. <br><br> Caso vc não tenha digitado um numero. <br><br> Digite um numero!!!")
+            }
 
-            var item2 = ("Suco: R$3,50");
 
-            var item3 = ("Água: 2,00");
 
-            var item4 = ("Cerveja: EM FALTA!!!")
 
-            var escolhaDoCliente = prompt("Oque vai querer?")
 
-            escolhaBebida ();
+
+
+
         </script>
         
     </body>
