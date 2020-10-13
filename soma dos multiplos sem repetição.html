@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Soma dos multiplos</title>
+    </head>
+
+    <body>
+        <script>
+
+            function calcularMulpiplicadores (limite){
+
+                var multiplicador3e5 = 0;
+
+                for(var i = 0; i <= limite; i++){
+
+                    if (i % 3 == 0 || i % 5 == 0)
+                    {
+                        multiplicador3e5 = multiplicador3e5 + i;
+                    }
+
+                }
+
+                return "valor total dos multiplos: " + (multiplicador3e5);
+
+            }
+
+            document.write(calcularMulpiplicadores (parseInt(prompt("Digite um numero!!!"))));
+
+        </script>
+    </body>
+</html>

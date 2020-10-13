@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>botões</title>
+    </head>
+
+    <body>
+        <script>
+
+            var nomeBotoes = ["Allan", "Marcus", "Henryque", "lorenzo", "Amanda"]
+
+            function criaBotao(){
+
+                for (var contador = 0; contador < nomeBotoes.length; contador++) {
+
+                    document.write('<button onclick="alert(' + "'" + nomeBotoes[contador] + "'" + ')">' +  nomeBotoes[contador] + "</button> <br> <br>");
+
+                }
+            }
+
+            criaBotao();
+
+            function alerta(){
+                alert("uhuuuul");
+            }
+
+        </script>    
+    </body>
+</html>

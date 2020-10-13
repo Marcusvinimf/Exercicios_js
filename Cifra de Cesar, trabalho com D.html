@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>rascunho</title>
+    </head>
+
+    <body>
+        <script>
+
+            //--------minha base de sempre--------
+
+            function quebraDeLinha() {
+
+                document.write("<br>");
+            }
+
+            function linhaDeSeparacao() {
+
+                document.write("<hr>");
+            }
+
+            function oqueVaiParecerEscrito(trabalho) {
+
+                document.write(trabalho);
+                quebraDeLinha();                
+            }
+
+            function quebraDeLinhaDepois() {
+
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+            }
+
+            //--------minha base de sempre--------
+
+            var alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+            var mensagemEncriptada ='';
+
+                var mensagem = prompt("Escreva uma palavra em maiusculo: ");
+
+            var deslocamento = 7
+            for (var i = 0; i < mensagem.length; i++){
+
+            var frase = mensagem.charCodeAt([i]);
+
+                frase = (frase - 65 + deslocamento) % 26;
+
+                mensagemEncriptada += alfabeto[frase];
+
+            }
+            
+            oqueVaiParecerEscrito('Sua mensagem criptografada é: ' + mensagemEncriptada);
+
+            var mensagemDescriptada ='';
+
+            var mensagem = mensagemEncriptada ;
+
+            var deslocamento = 19;
+
+            for (var i = 0; i < mensagem.length; i++){
+
+            var frase = mensagem.charCodeAt([i]);
+
+                frase = (frase - 65 + deslocamento) % 26;
+
+                mensagemDescriptada += alfabeto[frase];
+
+            }
+
+            oqueVaiParecerEscrito('Sua mensagem descriptografada é: ' + mensagemDescriptada);
+
+        </script>
+        
+    </body>
+</html>

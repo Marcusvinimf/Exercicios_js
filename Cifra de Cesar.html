@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cifra de Cesar</title>
+    </head>
+
+    <body>
+        <script>
+            //--------minha base de sempre--------
+
+            function quebraDeLinha() {
+
+                document.write("<br>");
+            }
+
+            function linhaDeSeparacao() {
+
+                document.write("<hr>");
+            }
+
+            function oqueVaiParecerEscrito(trabalho) {
+
+                document.write(trabalho);
+                quebraDeLinha();                
+            }
+
+            function quebraDeLinhaDepois() {
+
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+            }
+
+            //--------minha base de sempre--------
+
+            function cifraComCifraDeCesar( deslocamento, mensagem ){
+
+                var numReceb = 0;
+                var mensagemEncriptada = "";
+
+                for ( var i = 0; i < mensagem.length; i++){
+
+                    numReceb = mensagem[i].charCodeAt();
+                    mensagemEncriptada += String.fromCharCode(numReceb + deslocamento);
+
+                }
+                return mensagemEncriptada;
+            }
+
+            function decifraCifraDeCesar( deslocamento, mensagemCifrada )
+            {
+
+                var numReceb = 0
+                var mensagemDecifrada = "";
+
+                for ( var i = 0; i < mensagemCifrada.length; i++ ){
+
+                    numReceb = mensagemCifrada[i].charCodeAt();
+                    mensagemDecifrada += String.fromCharCode(numReceb - deslocamento);
+                }
+
+                return mensagemDecifrada;
+
+            }
+
+            var qualquerCoisa = prompt("escreva algo em maiusculo");
+
+            var qualquerCoisa2 = qualquerCoisa;
+
+            oqueVaiParecerEscrito(cifraComCifraDeCesar( 1, qualquerCoisa));
+
+            oqueVaiParecerEscrito(decifraCifraDeCesar( 0, qualquerCoisa2));
+
+        </script>
+    </body>
+</html>
