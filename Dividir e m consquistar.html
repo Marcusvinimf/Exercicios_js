@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dividir e Conquistar</title>
+    </head>
+
+    <body>
+        <script>
+            //--------minha base de sempre--------
+
+            function quebraDeLinha() {
+
+                document.write("<br>");
+            }
+
+            function linhaDeSeparacao() {
+
+                document.write("<hr>");
+            }
+
+            function oqueVaiParecerEscrito(trabalho) {
+
+                document.write(trabalho);
+                quebraDeLinha();                
+            }
+
+            function quebraDeLinhaDepois() {
+
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+            }
+           
+            //--------minha base de sempre---------
+
+
+
+            var matriculados = ["marcus", "mariane", "rafael", "mainara", "amanda"];
+
+            var presentes = ["mariane", "rafael", "mainara"];
+
+            function calculaPresentes(matriculados, presentes){
+                
+                var alunosPresentes = 0;
+
+                for(var i = 0; i < presentes.length; i++)
+                {
+                    var quemRespondeu = presentes[i];
+
+                    if (matriculados.indexOf ( quemRespondeu ) != -1 )
+                    {
+                        alunosPresentes++;
+                    }
+                }
+                return alunosPresentes;
+            }
+
+            oqueVaiParecerEscrito(calculaPresentes(matriculados, presentes));
+
+        </script>
+    </body>
+</html>
