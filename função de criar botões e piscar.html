@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>rascunho</title>
+    </head>
+
+    <body>
+
+        <div id="criarBotoes" >
+        </div>
+        
+        <script>
+
+            //--------minha base de sempre--------
+
+            function quebraDeLinha() {
+
+                document.write("<br>");
+            }
+
+            function linhaDeSeparacao() {
+
+                document.write("<hr>");
+            }
+
+            function oqueVaiParecerEscrito(trabalho) {
+
+                document.write(trabalho);
+                document.write("<br>");
+                document.write("<br>");           
+            }
+
+            function quebraDeLinhaDepois() {
+
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+            }
+
+            //--------minha base de sempre--------
+
+            //-------- Atividade rascunho--------------------------------------------------------
+
+            var body = document.querySelector('body')
+
+            var buttonCerto = document.createElement('button')
+            
+            body.appendChild(buttonCerto)
+
+            buttonCerto.innerText = "adiciona botão e muda background"
+
+            var contador = 0
+
+            buttonCerto.onclick = mudaEAdiciona
+            
+            function mudaEAdiciona (){
+
+                contador++
+                var maisUmButon = document.createElement('button')
+
+                maisUmButon.onclick = mudaEAdiciona; //todos os botões que criamos tambem criam botões
+
+                maisUmButon.innerText = `mais ${contador}`;
+                body.appendChild(maisUmButon)
+
+                if(body.style.background == "blue" ){
+                    document.body.style.background = "red";
+                }else{
+                    document.body.style.background = "blue"
+                }
+            }
+            //-------- Atividade rascunho------------------------------------------------------
+
+        </script>
+        
+    </body>
+</html>
