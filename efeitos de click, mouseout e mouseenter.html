@@ -38,9 +38,15 @@
 
                 var body = document.querySelector('body')
 
+                body.style.display = "flex";
+                body.style.alignItens = "flex-start";
+                body.style.justifyContent ="center";
+
                 var botaoQueMuda = document.createElement('button');
 
                 body.appendChild(botaoQueMuda)
+               
+                botaoQueMuda.style.fontSize = "150px";
 
                 botaoQueMuda.innerText = "Izoton..." // ou innerHTML
 
@@ -59,7 +65,7 @@
                 botaoQueMuda.addEventListener('mouseout',quandoMouseSair )
                 
                 function quandoMouseSair(){
-                    botaoQueMuda.innerText = 'de programação'
+                    botaoQueMuda.innerText = 'de programação!!!'
                 }
         </script>
     </body>
