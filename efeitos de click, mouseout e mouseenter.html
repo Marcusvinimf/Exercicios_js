@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>efeitos de click, mouseout e mouseenter</title>
+    </head>
+
+    <body>
+        <script>
+            //--------minha base de sempre--------
+
+            function quebraDeLinha() {
+
+                document.write("<br>");
+            }
+
+            function linhaDeSeparacao() {
+
+                document.write("<hr>");
+            }
+
+            function oqueVaiParecerEscrito(trabalho) {
+
+                document.write(trabalho);
+                quebraDeLinha();                
+            }
+
+            function quebraDeLinhaDepois() {
+
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+            }
+
+            //--------minha base de sempre--------
+
+
+                var body = document.querySelector('body')
+
+                var botaoQueMuda = document.createElement('button');
+
+                body.appendChild(botaoQueMuda)
+
+                botaoQueMuda.innerText = "Izoton..." // ou innerHTML
+
+                botaoQueMuda.addEventListener('mouseenter', quandoMouseEntrar)
+
+                function quandoMouseEntrar(){
+                    botaoQueMuda.innerText = 'melhor e'
+                }
+
+                botaoQueMuda.addEventListener('click', quandoClicar)
+                
+                function quandoClicar(){
+                    botaoQueMuda.innerText = 'mais brabo professor'
+                }
+
+                botaoQueMuda.addEventListener('mouseout',quandoMouseSair )
+                
+                function quandoMouseSair(){
+                    botaoQueMuda.innerText = 'de programação'
+                }
+        </script>
+    </body>
+</html>
