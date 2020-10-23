@@ -38,35 +38,45 @@
 
                 var body = document.querySelector('body')
 
-                body.style.display = "flex";
-                body.style.alignItens = "flex-start";
-                body.style.justifyContent ="center";
+                body.style.display = "flex"; //--------------------
+                body.style.alignItens = "flex-start"; //----------------
+                body.style.justifyContent ="center"; //------------------
 
                 var botaoQueMuda = document.createElement('button');
 
-                body.appendChild(botaoQueMuda)
+                body.appendChild(botaoQueMuda);
                
-                botaoQueMuda.style.fontSize = "150px";
+                botaoQueMuda.style.fontSize = "150px"; // -------------------------
 
-                botaoQueMuda.innerText = "Izoton..." // ou innerHTML
+                botaoQueMuda.innerText = "Izoton..."; // ou innerHTML
 
-                botaoQueMuda.addEventListener('mouseenter', quandoMouseEntrar)
-
-                function quandoMouseEntrar(){
+                botaoQueMuda.addEventListener('mouseenter', function (){
                     botaoQueMuda.innerText = 'melhor e'
-                }
+                })
 
-                botaoQueMuda.addEventListener('click', quandoClicar)
+
+                botaoQueMuda.addEventListener('mousedown', quandoClicar)
                 
                 function quandoClicar(){
-                    botaoQueMuda.innerText = 'mais brabo professor'
+                    botaoQueMuda.innerText = 'mais brabo professor';
+                }
+
+                
+                var quandoMouseSair = () => {
+                    botaoQueMuda.innerText = 'de programação!!!'
+                }
+
+                botaoQueMuda.addEventListener('mouseup',quandoMouseSair )
+
+
+
+                var quandoMouseSair = function (){
+                    botaoQueMuda.innerText = "Izoton...";
                 }
 
                 botaoQueMuda.addEventListener('mouseout',quandoMouseSair )
                 
-                function quandoMouseSair(){
-                    botaoQueMuda.innerText = 'de programação!!!'
-                }
+                
         </script>
     </body>
 </html>

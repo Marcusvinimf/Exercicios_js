@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <title>dinamica e exemplos de keypress</title>
+
+</head>
+    <body>
+        <script>
+            var body = document.querySelector("body");
+
+            body.style.display = "flex";
+            body.style.alignItens = "flex-start";
+            body.style.justifyContent ="center";
+
+            var img = document.createElement("img");
+            body.appendChild(img);
+
+            img.addEventListener("click", function(){
+                document.body.style.justifyContent =("flex-end");
+            })
+
+            img.addEventListener("dblclick",clicarDuasVezes);
+
+            function clicarDuasVezes(){
+                document.body.style.justifyContent = ("center");
+            }
+
+            var tecla = function (){
+                document.body.style.background = "black";
+            }
+
+            body.addEventListener('keypress', tecla);
+
+            var tecla = () => {
+                document.body.style.background = "white";
+            }
+
+            body.addEventListener('click', tecla);
+
+            img.src = "https://vignette.wikia.nocookie.net/coragem/images/1/11/Courage.a.jpg/revision/latest?cb=20180916215413&path-prefix=pt-br";
+
+        </script>
+    </body>
+</html>
