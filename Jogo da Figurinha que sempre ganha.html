@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>jogo da figurinha que sempre ganha</title>
+    </head>
+
+    <body>
+
+        <div class="imagem">
+            <img src="https://i.ytimg.com/vi/3GXTtQZ40lE/0.jpg" alt="">
+        </div>
+        <style>
+            img{
+                margin: 2%;
+                height: 100px;
+            }
+        </style>
+
+        <script>
+            var imagem = document.querySelector('div.imagem')
+
+            imagem.addEventListener('mouseover', tentarPegar)
+
+            function tentarPegar(){
+                document.body.style.padding = "300px";
+            }
+
+            imagem.addEventListener('mouseenter', tentarPegar2)
+
+            function tentarPegar2(){
+                document.body.style.padding = "0px";
+            }
+
+            imagem.addEventListener('click', tentarPegar3)
+
+            function tentarPegar3(){
+                document.body.style.padding = "600px";
+            }
+
+        </script>
+    </body>
+</html>

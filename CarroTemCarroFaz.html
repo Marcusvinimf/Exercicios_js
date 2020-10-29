@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Carro Json</title>
+    </head>
+    <body>
+        <script>
+            
+            const carro = {
+                rodas: ["fe", "fd", "te", "td"],
+                portas:["fe", "fd", "te", "td"],
+                volante: 1,
+                acentos: ["motorista", "passageiro", "banco de trás"],
+                motor: 1,
+                farois: ["fe", "fd", "te", "td"],
+                portamalas: 1,
+                janelas: ["fe", "fd", "te", "td"],
+                pedais: ["acelera", "freio", "embreagem"],
+                freiodemao: 1,
+                cor: "vermelha",
+                ligado: false,    
+                tamanho: 4,
+
+                gasolina: 100,
+
+                ligar: function() {
+                    if(this.gasolina==0){
+                        this.ligado = false
+                        console.log('Carro sem gasolina')
+                        return 'Carro sem gasolina'
+                    }
+                    console.log('VRUM VRUM VRUM!!! \n SAI DA FRENTEEEEEE!!!!!')
+                    this.ligado = true
+                },
+
+                velocidade: 0,
+
+                acelerar: function() {
+                    if(this.combustivel==0){
+                        this.ligado = false
+                        console.log('Carro sem gasolina')
+                        return 'Carro sem gasolina'
+                    }
+                    if(this.ligado==true){
+                        this.velocidade += 10
+                        this.gasolina-=2
+                        console.log( "gasolina " + this.gasolina)
+                        return this.velocidade
+                    } else {
+                        console.log('Carro desligado')
+                    }
+                    
+                },
+
+            };
+        </script>
+    </body>
+</html>
