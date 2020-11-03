@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cafeteira</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            const Cafeteira = {
+                agua: 30,
+                po: 10,
+                coadorDePapel: 1,
+                ligada: false,
+
+                ligar: function (){
+                    if(this.agua <= 0 || this.po <= 0 || this.coadorDePapel <= 0 ){
+                        console.log("sua cafeteira vai estragar, Desligue!!!")
+                        return "sua cafeteira vai estragar, Desligue!!!"
+                    }else{
+                        ligada = true
+                        console.log("barulhinho gostoso de caféeeeee... aaaaaaaaaaaahh")
+                        return "barulhinho gostoso de caféeeeee... aaaaaaaaaaaahh"
+                    }
+                },
+
+                fazerCafe: function (){
+                    if(this.agua <= 0 || this.po <= 0 || this.coadorDePapel <= 0 ){
+                        console.log("sua cafeteira vai estragar, Desligue!!!")
+                        return "tem que adicionar outro pô de café, adicionar água novamente e retirar o antigo coador de café e por um novo"
+                    }else{
+                        this.agua = 0
+                        this.po = 0
+                        this.coadorDePapel = 0
+                        console.log("barulhinho gostoso de caféeeeee... aaaaaaaaaaaahh")
+                        return "olha o cafezim saindo, povo!!!"
+                    }
+                },
+                    
+            }
+
+        </script>
+    </body>
+</html>
