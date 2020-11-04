@@ -1,0 +1,43 @@
+coisas que tem que ter em uma calculadora:
+
+funcionais:
+
+1. 10 numeros
+
+2. operadores - + * /
+
+3. botão de limpa
+
+4. resultado tipo =
+
+5. display (pra ver o que vc digitou e o resultado que vai sair)
+
+6. um botão que mostra o historico dentro do display
+
+7. um botão que diferencia os numeros positivos dos numeros negativos
+
+8. um botão de potencia
+
+9. botão de porcentagem
+
+10. um botão de raiz quadrada
+
+11. botão de virgula ","
+
+12. função de fração
+
+não funcionais:
+
+1. pode ter um estilo
+
+2. responsividade
+
+3. diferenciar botão de operadores e numeros com cor
+
+4. versionamento todas as pessoas devem ter codigo versionado com o github
+
+5. todos devem fazer um repositorio e criar um projeto na maquiina 
+
+6. colocar um limite de itens na calculadora (16)
+
+7. um jeito de mudar a cor pra um modo noturno ou modo daltônico

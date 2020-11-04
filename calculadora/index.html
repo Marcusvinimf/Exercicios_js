@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/calc.css">
+    
+</head>
+<body>
+    
+    <div id="container">
+        
+        <div id="historico"></div>
+        <div id="input"></div>
+        
+        <div id="operadores-superior">
+            <div class="operador" id="">%</div>
+            <div class="operador" id="">¹/x</div>
+            <div class="operador" id="">X²</div>
+            <div class="operador" id="">√²</div>
+            <div class="operador" id="limpa_telaCE">CE</div>
+            <div class="operador" id="limpa_telaC">C</div>
+            <div class="operador" id="">BKS</div>
+            <div class="operador" id="operador_divisao">/</div>
+        </div>
+        <main>
+            <div id="numerais">
+                <div class="btn" id="digito_1">1</div>
+                <div class="btn" id="digito_2">2</div>
+                <div class="btn" id="digito_3">3</div>
+                <div class="btn" id="digito_4">4</div>
+                <div class="btn" id="digito_5">5</div>
+                <div class="btn" id="digito_6">6</div>
+                <div class="btn" id="digito_7">7</div>
+                <div class="btn" id="digito_8">8</div>
+                <div class="btn" id="digito_9">9</div>
+                <div class="operador" id="negativo">+ / -</div>
+                <div class="btn" id="digito_0">0</div>
+                <div class="operador" id="virgula">,</div>
+            </div>
+            
+            <div id="operadores-lateral">
+                <div class="operador" id='operador_multiplicacao'>X</div>
+                <div class="operador" id="operador_subtracao">-</div>
+                <div class="operador" id="operador_soma">+</div>
+                <div class="operador" id="botao_resultado">=</div>
+            </div>
+        </main>
+        <script src="../js/script_calculadora.js"></script>
+    </div>
+</body>
+</html>
