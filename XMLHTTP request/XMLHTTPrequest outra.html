@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>procure</h1>
+
+    <button id="botao">Clicar aqui</button>
+
+    <script>
+        let botao = document.getElementById("botao")
+
+        // criacao o objeto XMLHttpRequest e chama a request
+        let pedido = new XMLHttpRequest()
+
+
+        botao.addEventListener("click", function() {
+            // evento que altera o atributo readyState
+            pedido.onreadystatechange = function (dados) {
+                let body = document.querySelector("body")
+                let nome = document.createElement("h1")
+                let thumbnail = document.createElement("div")
+
+                if ( this.status == 200 && this.readyState == 4 ) {
+                    let string = this.responseText
+                    let json = JSON.parse(string) // converte para JSON
+                    let results = json.results // pega o results do objeto
+                    let arr = results[0] // seleciona o indice do array
+                    
+                    // insere imagem de perfil
+                    body.appendChild(thumbnail)
+                    thumbnail.innerHTML = `<img src="${arr.picture.large}">`
+                    
+                    // insere nome e sobrenome
+                    body.appendChild(nome)
+                    nome.innerText = arr.name.first + ' ' + arr.name.last
+                }
+            }
+            
+            /* metodo que inicializa uma requisicao ou incializa uma já existente 
+                        metodo           URL                */
+            pedido.open( "GET", "https://randomuser.me/api" );
+            
+            // envia a requisicao para o servidor
+            pedido.send()
+            
+        })
+    </script>
+</body>
+</html>

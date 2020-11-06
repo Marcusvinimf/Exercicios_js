@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <div id="conteudo">
+
+    </div>
+
+    <script>
+
+        let botao = document.createElement("button");
+        botao.innerHTML = "Pesquisar";
+        document.body.append(botao);
+
+        let conteudo = document.querySelector("#conteudo");
+
+        let informacoes = document.createElement("p");
+        conteudo.appendChild(informacoes);
+
+
+        botao.addEventListener("click", function () {
+            let pedido = new XMLHttpRequest();
+
+            pedido.onreadystatechange = function (dados) {
+                
+                if (this.status == 200 && this.readyState == 4) {
+                    var objeto = JSON.parse( this.responseText);
+
+                    informacoes.innerHTML = `Nome: ${objeto.results[0].name.first}<br>Idade: ${objeto.results[0].dob.age}<br>Data: ${objeto.results[0].dob.date}`;
+                    console.log(objeto);
+                }
+                
+            }
+
+            pedido.open("GET", "https://randomuser.me/api");
+
+            pedido.send();
+        })
+
+    </script>
+</body>
+
+</html>
