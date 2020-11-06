@@ -13,7 +13,9 @@
                 orelhas = 2
                 pelo = "longo"
 
-                constructor(numeroDePatas, numeroDeOrelhas, tamanhoDePelo)
+                _raca = "não tem" //---------------- exemplo de conveçãoq eu não pode mexer
+
+                constructor(numeroDePatas, numeroDeOrelhas, tamanhoDePelo, racaDoDog)
                 {
                     if(numeroDeOrelhas !== undefined){
                         this.patas = numeroDePatas
@@ -23,6 +25,9 @@
                     }
                     if(tamanhoDePelo !== undefined){
                         this.pelo = tamanhoDePelo
+                    }
+                    if(racaDoDog !== undefined){
+                        this._raca = racaDoDog
                     }
                 }
 
@@ -43,9 +48,17 @@
                     // console.log('cortou')---------------------------------
                     return 'arg ta, "NA REGUA!!!"'
                 }
+
+                get raca()
+                {
+                    return this._raca // ------------------------------- encodido somente pra leitura 
+                }
             }
 
-            let cachorroDoMarcus = new ViraLata(8, 4, "curto")
+            let cachorroDoMarcus = new ViraLata(8, 4, "curto",)
+
+            cachorroDoMarcus.raca = "outro" // ------------------------- assim não vai funcionar
+
             let cachorroDoLorenzo = new ViraLata()
             let cachorroDaRoberta = new ViraLata(3, 0)
             let cachorroDaAmanda = new ViraLata()   
