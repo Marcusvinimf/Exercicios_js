@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>XMLHTTPrequest</title>
+    </head>
+
+    <body>
+
+        <button>PROCURE ESSA PESSOA</button> 
+        <br><br>
+        
+        <script>
+            //------------------------------------------------------
+            let botao = document.querySelector('button')
+
+            let body = document.querySelector("body")
+
+            let foto = document.createElement("div")
+            body.appendChild(foto)
+
+            let oqueVaiAparecer = document.createElement("h3");
+            body.appendChild(oqueVaiAparecer);
+
+            let pedido = new XMLHttpRequest();
+            //------------------------------------------------------
+
+            botao.addEventListener("click", function(){
+            
+                pedido.onreadystatechange = function( dados )
+                {
+                    if ( this.status == 200 && this.readyState == 4 )
+                    {
+                        var objetoJson = JSON.parse(this.responseText);
+                        console.log(objetoJson)
+                    }
+                    oqueVaiAparecer.innerHTML = `Nome: ${objetoJson.results[0].name.title} ${objetoJson.results[0].name.first} ${objetoJson.results[0].name.last}`
+                    foto.innerHTML = `<img src="${objetoJson.results[0].picture.large}">`
+                }
+                   
+                
+                pedido.open("GET", "https://randomuser.me/api");
+
+                pedido.send();
+
+            })
+
+        </script>
+    </body>
+</html>
