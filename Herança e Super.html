@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Herança e Super</title>
+    </head>
+    <body>
+        <script>
+
+            class Animal
+            {
+                constructor(patas, nome)
+                {
+                    this._patas = patas;
+                    this._nome = nome;
+                }
+
+                fazerSom()
+                {
+                    console.log('chorou')
+                }
+            }
+
+            class Cachorro extends Animal
+            {
+                constructor(nome, patas, tipo, personalidade)
+                {
+                    super(patas, nome)
+                    this._tipo = tipo;
+                    this._personalidade = personalidade;
+                }
+
+                fazerSom()
+                {
+                    super.fazerSom()
+                    console.log('latiu')
+                }
+            }
+
+            class Gato extends Animal
+            {
+                constructor(nome, patas, tipo, fama)
+                {
+                    super(patas, nome)
+                    this._tipo = tipo;
+                    this._fama = fama
+                }
+
+                fazerSom()
+                {
+                    super.fazerSom()
+                    console.log('miou')
+                }
+            }
+
+            let cao = new Cachorro('Beethoven', 4, 'canino', 'defensor')
+            console.log(cao)
+
+            let cat = new Gato('Saphira', 4, 'felino', 'rei da internet')
+            console.log(cat)
+
+            let gatoDaAmanda = new Gato('Minerva', 4, 'felino', 'rei da casa da Amanda')
+
+            let array = [cao, cat, gatoDaAmanda]
+
+            console.log(array)
+
+            for(let bichinhos of array){
+                bichinhos.fazerSom()
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>aprendendo a usar o filter</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            let arr = [1,1,1,1,2,5,5,5,6,2,2] 
+
+            function filtrandoIguais(array){
+
+                let filtro = array.filter(function(elemento, index, array) {
+                    if(elemento == array[index+1]){
+                        return false
+                    }else{
+                        return true
+                    }
+                })
+
+                return filtro
+            }
+
+            document.write(filtrandoIguais(arr));
+
+        </script>
+    </body>
+</html>

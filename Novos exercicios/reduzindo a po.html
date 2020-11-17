@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Reduzindo a pó</title>
+    </head>
+
+    <body>
+        <script>
+            let alunos = [
+            {
+                nome: "aaaaa",
+                idade: 21,
+            },
+            {
+                nome: "bbbbb",
+                idade: 33,
+            },
+            {
+                nome: "ccccc",
+                idade: 42,
+            },
+            {
+                nome: "ddddd",
+                idade: 18,
+            },
+            {
+                nome: "eeeee",
+                idade: 26,
+            },
+            {
+                nome: "fffff",
+                idade: 27,
+            },
+            {
+                nome: "ggggg",
+                idade: 32,
+            },
+            ]
+
+            let media = alunos.reduce((van,vat )=>{
+                
+                let soma = (van + vat.idade / alunos.length)
+
+                return soma
+            
+            }, 0)
+
+            console.log (media.toFixed(2) + "  <==== primeira resolução")
+
+            // ---------------------------------resolvendo essa mesma questão em uma unica linha:
+            let mesmaMedia = alunos.reduce((van,vat )=>{return van + vat.idade / alunos.length}, 0)
+            console.log (mesmaMedia.toFixed(2) + "  <==== segunda resolução (em uma unica linha)")
+
+        </script>
+    </body>
+</html>

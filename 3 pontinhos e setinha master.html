@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>setinha master</title>
+    </head>
+    <body>
+        <script>
+
+            let dados = ["Fulano"];
+
+            function ola( nomeDaPessoa, saudacao, pontuacao )
+            {
+
+            console.log( saudacao + " " + nomeDaPessoa + pontuacao );
+
+            }
+
+            ola(...dados, "ola", "!!!")
+
+
+
+            let listaDeQuadrados =
+                [
+                    {
+                    largura: 100,
+                    altura: 100,
+                     },
+
+                    {
+                    largura: 30,
+                    altura: 10,
+                    },
+
+                    {
+                    largura: 20,
+                    altura: 13,
+                    },
+
+                    {
+                    largura: 5,
+                    altura: 5,
+                    },
+
+                    {
+                    largura: 1,
+                    altura: 1,
+                    },
+                ]
+
+            let resultado = listaDeQuadrados.map((x) => x.largura*x.altura)
+            console.log(resultado)
+
+
+                
+        </script>
+    </body>
+</html>

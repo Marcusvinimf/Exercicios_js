@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>teste</title>
+    </head>
+
+    <body>
+        <script>
+            // Molde do objeto
+            class Pote
+            {
+                // Nome dos atributos
+                conteudo; 
+                cor;
+                tamanhoEmCm;
+
+                // Construtor do objeto: É esta a função chamada quando usamos
+                // o new NomeDaClasse( param1, param2, ... )
+                constructor( conteudoCustomizado, corCustomizada, tamanhoCustomizado )
+                {
+                    // Coloco os valores padrões no meu objeto
+                    this.conteudo = "Água";
+                    this.cor = "Transparente";
+                    this.tamanhoEmCm = 10;
+
+                    // Se foi passado como parâmetro, colocamos no objeto
+                    if ( conteudoCustomizado !== undefined )
+                        this.conteudo = conteudoCustomizado;
+
+                    // Se foi passado como parâmetro, colocamos no objeto
+                    if ( corCustomizada !== undefined )
+                        this.cor = corCustomizada;
+
+                    // Se foi passado como parâmetro, colocamos no objeto
+                    if ( tamanhoCustomizado !== undefined )
+                        this.tamanhoEmCm = tamanhoCustomizado;
+                }
+
+                // Método para esvaziar a garrafa
+                esvaziaTudo()
+                {
+                    this.conteudo = "";
+                }
+            }
+
+            // Criamos um novo objeto do tipo Pote. Passamos só o conteúdo e
+            // a cor para o construtor.
+            let garrafa = new Pote("Suco", "Vermelho");
+
+            // Mostramos a garrafa
+            console.log( garrafa );
+
+            // Podemos chamar esse método pq garrafa é um objeto do tipo Pote
+            garrafa.esvaziaTudo();
+
+            // Mostramos a garrafa novamente, que agora está vazia
+            console.log( garrafa );
+            
+        </script>
+    </body>
+</html>
