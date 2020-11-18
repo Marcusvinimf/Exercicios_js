@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>closure</title>
+    </head>
+    <body>
+        <script>
+
+            function iniciaSoma(numero){
+
+                function calcula(outroNumero)
+                {
+                    return numero + outroNumero
+                }
+
+                return calcula
+            }
+
+            let soma5 = iniciaSoma(5);
+
+            let soma10 = iniciaSoma(10);
+
+            let soma15 = iniciaSoma(15)
+
+            console.log(soma5(2)); // 7
+
+            console.log(soma10(2)); // 12
+
+            console.log(soma15(20)); // 35
+
+
+        </script>
+    </body>
+</html>
