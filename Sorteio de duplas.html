@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>suplas</title>
+    </head>
+    <body>
+
+        <button>VAI DUPLAS!!!</button>
+
+        <script>
+            function duplasFormadas(){
+                
+                var numeroAleatorio1 = Math.round(Math.random () * 8 );
+                
+                console.log(numeroAleatorio1)
+
+                if (numeroAleatorio1 == 1 || numeroAleatorio1 == 5){
+                    document.write('Marcus e Amanda <br> Kevin e Marcela');
+                }else if (numeroAleatorio1 == 2  || numeroAleatorio1 == 6){
+                    document.write('Marcus e Kevin <br> Marcela e Amanda');
+                }else if (numeroAleatorio1 == 3 || numeroAleatorio1 == 7){
+                    document.write('Marcus e Marcela <br> Kevin e Amanda');
+                }else{
+                    alert('SUSPENSEEEEEE, VAI LA TENTA DNV!!!')
+                }
+
+            }
+
+            let botao = document.querySelector('button')
+
+            botao.onclick = duplasFormadas;
+            
+        </script>
+    </body>
+</html>
